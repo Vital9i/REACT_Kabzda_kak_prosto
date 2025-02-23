@@ -1,24 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Accordion} from './components/Accordion/Accordion';
-import {Rating} from './components/Rating/Rating';
+import { Accordion } from './components/Accordion/Accordion';
+import { Rating } from './components/Rating/Rating';
+import { OnOff } from './components/OnOff/OnOff';
+import { UnControledAccordion } from './components/UncontroledAccordion/UnControledAccordion';
 
 function App() {
     console.log('App rendering')
 
     return (
         <div className="App">
-            <AppTitle title={'this is component'}/>
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Accordion titleValue={'Menu'} collapsed={true}/>
-            <Rating value={5}/>
-            <Rating value={6}/>
-            <Accordion titleValue={'Users'} collapsed={false}/>
+
+
+            <OnOff/>
+            <UnControledAccordion titleValue={'uncontrol'}/>
+            <UnControledAccordion titleValue={'uncontrol'}/>
+
+
+            {/* <Accordion titleValue={'Menu'} collapsed={true}/>
+            <Accordion titleValue={'Users'} collapsed={false}/> */}
         </div>
     );
 }
